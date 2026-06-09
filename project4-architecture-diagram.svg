@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 900 760" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="760" fill="#f5f5f5"/>
+
+  <text x="450" y="40" font-size="26" font-weight="bold" text-anchor="middle" fill="#232f3e">
+    AWS Project 4: Serverless API
+  </text>
+  <text x="450" y="68" font-size="15" text-anchor="middle" fill="#666">
+    Lambda + API Gateway + DynamoDB
+  </text>
+
+  <rect x="320" y="95" width="260" height="60" fill="#879196" stroke="#232f3e" stroke-width="2" rx="5"/>
+  <text x="450" y="120" font-size="15" font-weight="bold" text-anchor="middle" fill="white">
+    Internet (Browser / Client)
+  </text>
+  <text x="450" y="140" font-size="11" text-anchor="middle" fill="white">
+    sends HTTPS request
+  </text>
+
+  <line x1="450" y1="155" x2="450" y2="195" stroke="#232f3e" stroke-width="2"/>
+  <polygon points="450,200 444,190 456,190" fill="#232f3e"/>
+  <text x="540" y="180" font-size="11" fill="#232f3e">1. HTTPS Request</text>
+
+  <rect x="300" y="200" width="300" height="80" fill="#CC2264" stroke="#232f3e" stroke-width="2" rx="5"/>
+  <text x="450" y="228" font-size="16" font-weight="bold" text-anchor="middle" fill="white">
+    API Gateway (HTTP API)
+  </text>
+  <text x="450" y="250" font-size="11" text-anchor="middle" fill="white">
+    The front door - public URL
+  </text>
+  <text x="450" y="268" font-size="11" text-anchor="middle" fill="white">
+    Routing - Security boundary
+  </text>
+
+  <line x1="450" y1="280" x2="450" y2="320" stroke="#232f3e" stroke-width="2"/>
+  <polygon points="450,325 444,315 456,315" fill="#232f3e"/>
+  <text x="540" y="305" font-size="11" fill="#232f3e">2. Invoke (Proxy)</text>
+
+  <rect x="300" y="325" width="300" height="80" fill="#FF9900" stroke="#232f3e" stroke-width="2" rx="5"/>
+  <text x="450" y="353" font-size="16" font-weight="bold" text-anchor="middle" fill="white">
+    AWS Lambda
+  </text>
+  <text x="450" y="375" font-size="11" text-anchor="middle" fill="white">
+    projekt4-hallo (Node.js 24.x)
+  </text>
+  <text x="450" y="393" font-size="11" text-anchor="middle" fill="white">
+    Business logic - Stateless - On demand
+  </text>
+
+  <line x1="450" y1="405" x2="450" y2="445" stroke="#232f3e" stroke-width="2"/>
+  <polygon points="450,450 444,440 456,440" fill="#232f3e"/>
+  <text x="540" y="430" font-size="11" fill="#232f3e">3. Read (AWS SDK)</text>
+
+  <rect x="300" y="450" width="300" height="80" fill="#534AB7" stroke="#232f3e" stroke-width="2" rx="5"/>
+  <text x="450" y="478" font-size="16" font-weight="bold" text-anchor="middle" fill="white">
+    DynamoDB
+  </text>
+  <text x="450" y="500" font-size="11" text-anchor="middle" fill="white">
+    projekt3-spieler (from Project 3!)
+  </text>
+  <text x="450" y="518" font-size="11" text-anchor="middle" fill="white">
+    NoSQL - On-demand
+  </text>
+
+  <rect x="650" y="325" width="220" height="80" fill="none" stroke="#1B660F" stroke-width="2" stroke-dasharray="5,5" rx="5"/>
+  <text x="760" y="352" font-size="13" font-weight="bold" text-anchor="middle" fill="#1B660F">
+    IAM Execution Role
+  </text>
+  <text x="760" y="373" font-size="10" text-anchor="middle" fill="#1B660F">
+    DynamoDB ReadOnly
+  </text>
+  <text x="760" y="390" font-size="10" text-anchor="middle" fill="#1B660F">
+    Least Privilege
+  </text>
+  <line x1="650" y1="365" x2="600" y2="365" stroke="#1B660F" stroke-width="2" stroke-dasharray="3,3"/>
+
+  <rect x="60" y="575" width="780" height="155" fill="white" stroke="#232f3e" stroke-width="1" rx="5"/>
+  <text x="450" y="603" font-size="16" font-weight="bold" text-anchor="middle" fill="#232f3e">
+    Why Serverless?
+  </text>
+
+  <text x="240" y="635" font-size="13" font-weight="bold" text-anchor="middle" fill="#FF9900">No Server Management</text>
+  <text x="240" y="657" font-size="11" text-anchor="middle" fill="#232f3e">AWS handles provisioning,</text>
+  <text x="240" y="673" font-size="11" text-anchor="middle" fill="#232f3e">scaling, patching</text>
+
+  <text x="450" y="635" font-size="13" font-weight="bold" text-anchor="middle" fill="#CC2264">Auto-Scaling</text>
+  <text x="450" y="657" font-size="11" text-anchor="middle" fill="#232f3e">From zero to thousands</text>
+  <text x="450" y="673" font-size="11" text-anchor="middle" fill="#232f3e">of requests automatically</text>
+
+  <text x="660" y="635" font-size="13" font-weight="bold" text-anchor="middle" fill="#534AB7">Pay-per-Use</text>
+  <text x="660" y="657" font-size="11" text-anchor="middle" fill="#232f3e">No requests = no cost</text>
+  <text x="660" y="673" font-size="11" text-anchor="middle" fill="#232f3e">1M requests free / month</text>
+
+  <text x="450" y="710" font-size="12" font-style="italic" text-anchor="middle" fill="#666">
+    Complete end-to-end serverless application - no servers to manage
+  </text>
+</svg>
